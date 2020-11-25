@@ -1,0 +1,38 @@
+{
+  "name": "cypress-cucumber-typescript-starter",
+  "version": "0.0.0",
+  "description": "Cypress with cucumber and typescript",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "npm run lint --fix",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "cypress": "^6.0.0",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/integration/_common",
+    "stepDefinitions": "cypress/integration"
+  }
+}
