@@ -12,6 +12,7 @@
     "node_modules/cypress",
     "cypress/**/*.ts",
     "cypress/support/index.js",
-    "cypress/plugins/index.js"
+    "cypress/plugins/index.js",
+    "husky.config.js"
   ]
 }

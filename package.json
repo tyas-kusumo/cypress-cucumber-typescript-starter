@@ -1,14 +1,23 @@
 {
   "name": "cypress-cucumber-typescript-starter",
   "version": "0.0.0",
+  "license": "ISC",
   "description": "Cypress with cucumber and typescript",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:viresse19/cypress-cucumber-typescript-starter.git"
+  },
+  "author": "Tyas Kusumo",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint --fix",
-    "cypress:open": "cypress open"
+    "test:open": "cypress open",
+    "test": "cypress run",
+    "build": "./scripts/build.sh"
   },
   "dependencies": {
     "@cypress/browserify-preprocessor": "^3.0.1",
+    "@types/node": "^14.14.9",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "cypress": "^6.0.0",
@@ -23,12 +32,8 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.5.2",
     "prettier": "^2.2.0",
+    "resolve": "^1.19.0",
     "typescript": "^4.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
